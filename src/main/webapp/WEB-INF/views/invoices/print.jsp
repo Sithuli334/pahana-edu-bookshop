@@ -12,6 +12,18 @@
             <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
                 rel="stylesheet">
             <style>
+                /* Layout: center and constrain printable card for better visual balance */
+                @media screen {
+                    .container {
+                        max-width: 880px;
+                        margin: 28px auto;
+                        padding: 36px;
+                        background: rgba(255, 255, 255, 0.02);
+                        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+                        border-radius: 10px;
+                    }
+                }
+
                 body {
                     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
                     font-size: 14px;
@@ -20,143 +32,142 @@
                     background: linear-gradient(135deg, #071428 0%, #072f4f 60%);
                 }
 
-                /* Print behavior stays strong and switches to light theme for print */
-                @media print {
-                    body {
-                        font-size: 12px;
-                        margin: 0;
-                        padding: 20px;
-                        color: #000;
-                        background: #fff !important;
-                    }
-
-                    .container {
-                        max-width: none !important;
-                        margin: 0 !important;
-                        padding: 0 !important;
-                    }
-
-                    .no-print {
-                        display: none !important;
-                    }
-
-                    .page-break {
-                        page-break-before: always;
-                    }
-
-                    .table {
-                        font-size: 11px;
-                    }
-
-                    .company-header {
-                        margin-bottom: 40px;
-                    }
-
-                    .invoice-details {
-                        margin-bottom: 30px;
-                    }
-                }
-
-                @media screen {
-                    .container {
-                        max-width: 900px;
-                        margin: 20px auto;
-                        padding: 30px;
-                        background: rgba(255, 255, 255, 0.02);
-                        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
-                        border-radius: 8px;
-                    }
-                }
-
+                /* Company header */
                 .company-header {
                     text-align: center;
-                    margin-bottom: 40px;
-                    padding-bottom: 20px;
-                    border-bottom: 3px solid rgba(255, 255, 255, 0.06);
+                    margin-bottom: 20px;
+                    padding-bottom: 16px;
+                    border-bottom: 2px solid rgba(255, 255, 255, 0.04);
                 }
 
                 .company-header h1 {
                     color: #00bfa6;
-                    font-size: 2.2rem;
+                    font-size: 2rem;
                     font-weight: 700;
-                    margin-bottom: 5px;
+                    margin-bottom: 6px;
                 }
 
                 .company-header p {
-                    color: rgba(230, 243, 251, 0.8);
-                    font-size: 1rem;
-                    margin-bottom: 0;
+                    color: rgba(230, 243, 251, 0.82);
+                    margin: 0;
+                    font-size: 0.95rem;
                 }
 
+                /* Invoice title */
                 .invoice-title {
                     font-size: 1.6rem;
                     font-weight: 700;
                     color: #ffd166;
                     text-align: center;
-                    margin: 22px 0;
-                    text-transform: uppercase;
+                    margin: 18px 0;
                     letter-spacing: 1px;
                 }
 
-                .invoice-number {
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    color: #00bfa6;
-                }
-
+                /* Customer information box */
                 .customer-info {
                     background: rgba(255, 255, 255, 0.02);
-                    padding: 16px;
+                    padding: 14px;
                     border-radius: 8px;
-                    margin-bottom: 20px;
+                    margin-bottom: 18px;
                 }
 
                 .customer-info h5 {
                     color: #cfeef7;
-                    border-bottom: 2px solid rgba(255, 255, 255, 0.03);
-                    padding-bottom: 8px;
-                    margin-bottom: 12px;
+                    margin-bottom: 8px;
+                    font-weight: 600;
                 }
 
+                /* Notes box (dark friendly) */
+                .notes-box {
+                    background: rgba(255, 255, 255, 0.03);
+                    color: #d8f1f8;
+                    border-radius: 6px;
+                    padding: 12px;
+                    border: 1px solid rgba(255, 255, 255, 0.03);
+                }
+
+                /* Main table: solid single-color header, increased padding */
                 .table {
                     border: 1px solid rgba(255, 255, 255, 0.04);
+                    background: transparent;
+                    color: #e6f3fb;
                 }
 
                 .table thead th {
-                    background: linear-gradient(90deg, #06326b, #046d6e);
-                    color: #e6f3fb;
+                    background-color: #06326b !important;
+                    /* single header color */
+                    color: #ffffff !important;
                     font-weight: 700;
                     text-align: center;
-                    border: 1px solid rgba(255, 255, 255, 0.03);
+                    padding: 10px 12px;
+                    border: 0;
                 }
 
                 .table tbody td {
-                    vertical-align: middle;
-                    border: 1px solid rgba(255, 255, 255, 0.02);
                     color: #d8f1f8;
+                    padding: 12px;
+                    vertical-align: middle;
+                    border-top: 1px solid rgba(255, 255, 255, 0.02);
                 }
 
+                .table tbody td.text-end {
+                    text-align: right;
+                }
+
+                /* Totals / footer styling to stand out */
                 .table tfoot td {
                     font-weight: 700;
-                    background: rgba(255, 255, 255, 0.02);
-                    border: 1px solid rgba(255, 255, 255, 0.03);
-                }
-
-                .footer-info {
-                    margin-top: 40px;
-                    padding-top: 16px;
+                    background: rgba(0, 0, 0, 0.08);
+                    color: #ffffff;
+                    padding: 10px 12px;
                     border-top: 1px solid rgba(255, 255, 255, 0.03);
-                    text-align: center;
-                    color: rgba(230, 243, 251, 0.7);
                 }
 
-                .print-controls {
+                .table tfoot tr.total-row td {
+                    background: rgba(6, 50, 107, 0.9);
+                    color: #ffd;
+                    /* soft highlight for the grand total */
+                }
+
+                /* Make small numeric columns centered or right aligned for readability */
+                .table td.text-center {
+                    text-align: center;
+                }
+
+                .table td.text-right,
+                .table td.text-end {
+                    text-align: right;
+                }
+
+                /* Print controls (screen only) — smaller, non-intrusive */
+                .print-controls.no-print {
                     position: fixed;
                     top: 20px;
-                    right: 20px;
-                    z-index: 1000;
+                    right: 18px;
+                    z-index: 1200;
                 }
 
+                .print-controls .btn {
+                    min-width: 110px;
+                    margin-bottom: 8px;
+                }
+
+                @media (max-width: 900px) {
+                    .print-controls.no-print {
+                        position: static;
+                        display: flex;
+                        gap: 8px;
+                        justify-content: center;
+                        margin-bottom: 12px;
+                    }
+
+                    .container {
+                        margin: 16px;
+                        padding: 18px;
+                    }
+                }
+
+                /* Buttons */
                 .btn-print {
                     background: #00bfa6;
                     border-color: #00bfa6;
@@ -164,14 +175,66 @@
                 }
 
                 .btn-secondary {
-                    background: rgba(255, 255, 255, 0.1);
-                    border-color: rgba(255, 255, 255, 0.1);
+                    background: rgba(255, 255, 255, 0.06);
+                    border-color: rgba(255, 255, 255, 0.06);
                     color: #e6f3fb;
                 }
 
                 .btn-outline-secondary {
-                    border-color: rgba(255, 255, 255, 0.15);
+                    border-color: rgba(255, 255, 255, 0.12);
                     color: #e6f3fb;
+                }
+
+                /* Footer info */
+                .footer-info {
+                    margin-top: 28px;
+                    padding-top: 12px;
+                    border-top: 1px solid rgba(255, 255, 255, 0.03);
+                    text-align: center;
+                    color: rgba(230, 243, 251, 0.72);
+                    font-size: 0.95rem;
+                }
+
+                /* Print-specific overrides: force light theme and readable print output */
+                @media print {
+                    body {
+                        color: #000;
+                        background: #fff !important;
+                    }
+
+                    .container {
+                        box-shadow: none !important;
+                        background: #fff !important;
+                        padding: 0 !important;
+                        max-width: none !important;
+                        margin: 0 !important;
+                    }
+
+                    .print-controls {
+                        display: none !important;
+                    }
+
+                    .company-header h1 {
+                        color: #000;
+                    }
+
+                    .table thead th {
+                        background-color: #f4f4f4 !important;
+                        color: #000 !important;
+                    }
+
+                    .table tbody td,
+                    .table tfoot td {
+                        color: #000 !important;
+                        background: transparent !important;
+                        border-color: #ddd !important;
+                    }
+
+                    .notes-box {
+                        background: #fff;
+                        color: #000;
+                        border: 1px solid #eee;
+                    }
                 }
             </style>
         </head>
@@ -320,7 +383,7 @@
                         <div class="row mt-4">
                             <div class="col-12">
                                 <h5><i class="fas fa-sticky-note"></i> Notes:</h5>
-                                <div class="border p-3 bg-light rounded">
+                                <div class="notes-box">
                                     ${invoice.notes}
                                 </div>
                             </div>

@@ -25,6 +25,20 @@
                         color: #ffffff !important;
                     }
 
+                    .navbar .nav-link {
+                        color: #ffffff !important;
+                    }
+
+                    .navbar .nav-link:hover,
+                    .navbar .nav-link:focus {
+                        color: #ffffff !important;
+                    }
+
+                    .navbar .nav-link.active {
+                        color: #ffffff !important;
+                        font-weight: 600;
+                    }
+
                     .navbar {
                         background: linear-gradient(90deg, #06326b 0%, #046d6e 100%) !important;
                     }
@@ -119,7 +133,7 @@
                     }
 
                     .table thead th {
-                        background: linear-gradient(90deg, #06326b, #046d6e);
+                        background-color: #06326b;
                         color: #e6f3fb;
                     }
 
@@ -132,7 +146,7 @@
                     }
 
                     .table-modern {
-                        background: linear-gradient(90deg, #06326b, #046d6e);
+                        background-color: #06326b;
                     }
                 </style>
             </head>

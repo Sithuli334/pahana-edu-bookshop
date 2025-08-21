@@ -51,6 +51,53 @@
                         color: rgba(230, 243, 251, 0.78) !important;
                     }
 
+                    /* Form controls and table styles to match app theme */
+                    .form-control,
+                    .form-select,
+                    .input-group .form-control {
+                        background: rgba(255, 255, 255, 0.03);
+                        color: #e6f3fb;
+                        border: 1px solid rgba(255, 255, 255, 0.06);
+                    }
+
+                    .form-control::placeholder {
+                        color: rgba(230, 243, 251, 0.5);
+                    }
+
+                    .form-control:focus,
+                    .form-select:focus {
+                        background: rgba(255, 255, 255, 0.05);
+                        color: #fff;
+                        border-color: rgba(0, 191, 166, 0.4);
+                        box-shadow: 0 0 0 0.25rem rgba(0, 191, 166, 0.12);
+                    }
+
+                    /* Table styles (if used on form page) */
+                    .table {
+                        color: #e6f3fb;
+                        background-color: transparent !important;
+                        border-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    .table thead,
+                    .table thead th {
+                        background-color: #06326b !important;
+                        color: #e6f3fb !important;
+                        border-bottom: none !important;
+                    }
+
+                    .table tbody td {
+                        background-color: transparent !important;
+                        color: #d8f1f8;
+                        border-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    .table-hover tbody tr:hover {
+                        background-color: rgba(255, 255, 255, 0.03) !important;
+                        color: #ffffff;
+                    }
+
+                    /* Buttons */
                     .btn-primary {
                         background-color: #00bfa6;
                         border-color: #00bfa6;

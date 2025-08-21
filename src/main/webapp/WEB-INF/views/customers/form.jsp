@@ -30,6 +30,20 @@
                         color: #fff !important;
                     }
 
+                    .navbar .nav-link {
+                        color: #ffffff !important;
+                    }
+
+                    .navbar .nav-link:hover,
+                    .navbar .nav-link:focus {
+                        color: #ffffff !important;
+                    }
+
+                    .navbar .nav-link.active {
+                        color: #ffffff !important;
+                        font-weight: 600;
+                    }
+
                     .navbar.bg-white {
                         background: linear-gradient(90deg, #06326b 0%, #046d6e 100%) !important;
                     }
@@ -42,15 +56,53 @@
                         color: #e6f3fb;
                     }
 
+                    /* Tables (if any) and general table styles */
+                    .table {
+                        color: #e6f3fb;
+                        background-color: transparent !important;
+                        border-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    .table thead,
+                    .table thead th {
+                        background-color: #06326b !important;
+                        color: #e6f3fb !important;
+                        border-bottom: none !important;
+                    }
+
+                    .table tbody td {
+                        background-color: transparent !important;
+                        color: #d8f1f8;
+                        border-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    .table-hover tbody tr:hover {
+                        background-color: rgba(255, 255, 255, 0.03) !important;
+                        color: #ffffff;
+                    }
+
+                    /* Form controls */
+                    .form-control,
+                    .form-select {
+                        background: rgba(255, 255, 255, 0.03);
+                        color: #e6f3fb;
+                        border: 1px solid rgba(255, 255, 255, 0.06);
+                    }
+
                     .form-label,
                     .form-text {
                         color: rgba(230, 243, 251, 0.9);
                     }
 
-                    .text-muted {
-                        color: rgba(230, 243, 251, 0.78) !important;
+                    .form-control:focus,
+                    .form-select:focus {
+                        background: rgba(255, 255, 255, 0.05);
+                        color: #fff;
+                        border-color: rgba(0, 191, 166, 0.4);
+                        box-shadow: 0 0 0 0.25rem rgba(0, 191, 166, 0.12);
                     }
 
+                    /* Buttons */
                     .btn-primary {
                         background-color: #00bfa6;
                         border-color: #00bfa6;
@@ -61,11 +113,6 @@
                     .btn-outline-secondary {
                         color: #e6f3fb;
                         border-color: rgba(255, 255, 255, 0.08);
-                    }
-
-                    .table-modern thead {
-                        background: rgba(255, 255, 255, 0.02);
-                        color: #e6f3fb;
                     }
                 </style>
             </head>

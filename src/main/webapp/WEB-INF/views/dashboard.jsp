@@ -20,6 +20,7 @@
                         color: #e6f3fb;
                     }
 
+                    /* Navbar text colors (force white) */
                     .navbar-brand {
                         font-weight: 700;
                         color: #ffffff !important;
@@ -31,7 +32,12 @@
                     }
 
                     .navbar .nav-link {
-                        color: rgba(230, 243, 251, 0.85) !important;
+                        color: #ffffff !important;
+                    }
+
+                    .navbar .nav-link:hover,
+                    .navbar .nav-link:focus {
+                        color: #ffffff !important;
                     }
 
                     .navbar .nav-link.active {
@@ -115,18 +121,29 @@
                         color: rgba(230, 243, 251, 0.78) !important;
                     }
 
-                    /* Table adjustments for better contrast */
-                    .table thead {
-                        background: rgba(255, 255, 255, 0.02);
+                    /* Table styles: use single header color and dark theme (match invoices pages) */
+                    .table {
                         color: #e6f3fb;
+                        background-color: transparent !important;
+                        border-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    .table thead,
+                    .table thead th {
+                        background-color: #06326b !important;
+                        color: #e6f3fb !important;
+                        border-bottom: none !important;
+                    }
+
+                    .table tbody td {
+                        background-color: transparent !important;
+                        color: #d8f1f8;
+                        border-color: rgba(255, 255, 255, 0.05);
                     }
 
                     .table-hover tbody tr:hover {
-                        background: rgba(255, 255, 255, 0.01);
-                    }
-
-                    .text-decoration-none.small {
-                        color: rgba(230, 243, 251, 0.85);
+                        background-color: rgba(255, 255, 255, 0.03) !important;
+                        color: #ffffff;
                     }
 
                     /* Make badges slightly brighter on dark background */

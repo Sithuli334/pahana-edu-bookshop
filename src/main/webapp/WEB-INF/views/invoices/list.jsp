@@ -56,16 +56,35 @@
                     }
 
                     .table-modern thead {
-                        background: linear-gradient(90deg, #06326b, #046d6e);
+                        background-color: #06326b;
                         color: #fff;
                     }
 
-                    .table thead th {
+                    .table {
                         color: #e6f3fb;
+                        background-color: transparent !important;
+                        border-color: rgba(255, 255, 255, 0.05);
+                    }
+
+                    .table-hover tbody tr:hover {
+                        background-color: rgba(255, 255, 255, 0.03) !important;
+                        color: #ffffff;
+                    }
+
+                    .table thead th {
+                        background-color: #06326b !important;
+                        color: #e6f3fb !important;
+                        border-bottom: none !important;
+                    }
+
+                    .table-modern {
+                        background: transparent !important;
                     }
 
                     .table tbody td {
+                        background-color: transparent !important;
                         color: #d8f1f8;
+                        border-color: rgba(255, 255, 255, 0.05);
                     }
 
                     .badge.bg-info {
@@ -88,8 +107,36 @@
                         border-color: #00bfa6;
                     }
 
+                    .btn-outline-warning {
+                        color: #ffd166;
+                        border-color: rgba(255, 209, 102, 0.2);
+                    }
+
+                    .btn-outline-danger {
+                        color: #ff6b6b;
+                        border-color: rgba(255, 107, 107, 0.2);
+                    }
+
                     .text-muted {
                         color: rgba(230, 243, 251, 0.65) !important;
+                    }
+
+                    .navbar-brand {
+                        color: #fff !important;
+                    }
+
+                    .navbar .nav-link {
+                        color: #ffffff !important;
+                    }
+
+                    .navbar .nav-link:hover,
+                    .navbar .nav-link:focus {
+                        color: #ffffff !important;
+                    }
+
+                    .navbar .nav-link.active {
+                        color: #ffffff !important;
+                        font-weight: 600;
                     }
                 </style>
             </head>

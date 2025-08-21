@@ -34,7 +34,21 @@
 
             .navbar-brand,
             .navbar a {
-                color: rgba(255, 255, 255, 0.9) !important;
+                color: #ffffff !important;
+            }
+
+            .navbar .nav-link {
+                color: #ffffff !important;
+            }
+
+            .navbar .nav-link:hover,
+            .navbar .nav-link:focus {
+                color: #ffffff !important;
+            }
+
+            .navbar .nav-link.active {
+                color: #ffffff !important;
+                font-weight: 600;
             }
 
             .btn-outline-secondary {
@@ -102,7 +116,7 @@
             }
 
             .table thead th {
-                background: linear-gradient(90deg, #06326b, #046d6e);
+                background-color: #06326b;
                 color: #e6f3fb;
             }
 
