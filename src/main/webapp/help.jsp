@@ -15,22 +15,69 @@
                 <style>
                     body {
                         font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-                        background: #f5f7fb;
+                        background: linear-gradient(135deg, #071428 0%, #072f4f 60%);
+                        color: #e6f3fb;
+                        min-height: 100vh;
+                    }
+
+                    .navbar {
+                        background: linear-gradient(90deg, #06326b 0%, #046d6e 100%) !important;
                     }
 
                     .navbar-brand {
-                        font-weight: 600;
-                        letter-spacing: 0.2px
+                        font-weight: 700;
+                        color: #fff !important;
                     }
 
                     .card-modern {
                         border: 0;
                         border-radius: 12px;
-                        box-shadow: 0 6px 18px rgba(45, 63, 84, 0.08);
+                        box-shadow: 0 8px 28px rgba(2, 6, 23, 0.6);
+                        background: rgba(255, 255, 255, 0.02);
+                        color: #e6f3fb;
+                    }
+
+                    .card,
+                    .card-header {
+                        background: rgba(255, 255, 255, 0.02) !important;
+                        color: #e6f3fb;
+                    }
+
+                    .card-body {
+                        color: #e6f3fb;
                     }
 
                     .help-heading {
                         font-weight: 600;
+                        color: #dff8fb;
+                    }
+
+                    .text-muted {
+                        color: rgba(230, 243, 251, 0.7) !important;
+                    }
+
+                    .btn-primary {
+                        background: #00bfa6;
+                        border-color: #00bfa6;
+                    }
+
+                    .btn-outline-primary {
+                        color: #00bfa6;
+                        border-color: rgba(0, 191, 166, 0.12);
+                    }
+
+                    .btn-outline-success {
+                        color: #7ee6cd;
+                        border-color: rgba(126, 230, 205, 0.12);
+                    }
+
+                    .btn-outline-warning {
+                        color: #ffd166;
+                        border-color: rgba(255, 209, 102, 0.12);
+                    }
+
+                    a {
+                        color: #bfeff0;
                     }
                 </style>
             </head>
@@ -64,7 +111,8 @@
                                 <c:choose>
                                     <c:when test="${not empty sessionScope.userName}">
                                         <div class="me-3 text-muted small">Welcome,
-                                            <strong>${sessionScope.userName}</strong></div>
+                                            <strong>${sessionScope.userName}</strong>
+                                        </div>
                                         <a class="btn btn-outline-secondary btn-sm"
                                             href="<c:url value='/logout'/>">Logout</a>
                                     </c:when>
@@ -130,7 +178,8 @@
                                     <li>Keep item prices and taxes up to date to avoid invoice corrections.</li>
                                     <li>Use meaningful customer names and contact details for faster lookup.</li>
                                     <li>Regularly backup your database using the provided SQL scripts in the
-                                        <code>database/</code> folder.</li>
+                                        <code>database/</code> folder.
+                                    </li>
                                 </ul>
 
                                 <h5 class="mt-3">Troubleshooting</h5>
